@@ -57,7 +57,6 @@ const fetchAllReviews = () => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(state.review)
     })
         .then(async (res) => {
             state.allReviews = await res.json()
