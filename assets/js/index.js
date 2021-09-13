@@ -4,6 +4,7 @@ const star_rating = document.getElementById('star_rating')
 const star_icons = document.getElementsByTagName('i')
 
 const state = {
+    allReviews: [],
     review: {
         rating: 1,
         comment: ""
@@ -13,7 +14,6 @@ const state = {
         error: '',
     }
 }
-
 
 const updateStarRating = (rating) => {
     const icons = Array.from(star_icons)
@@ -37,8 +37,8 @@ submitButton.addEventListener('click', (event) => {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
-            
-          },
+
+        },
         body: JSON.stringify(state.review)
     })
         .then(res => {
