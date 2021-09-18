@@ -33,7 +33,7 @@ star_rating.addEventListener('click', (event) => {
 submitButton.addEventListener('click', (event) => {
     state.review.comment = input.value
 
-    fetch('http://localhost:3000/add_review', {
+    fetch('https://user-review-server.herokuapp.com/add_review', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

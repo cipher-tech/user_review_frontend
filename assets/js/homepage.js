@@ -52,7 +52,7 @@ const generateHtml = () => {
     })
 }
 const fetchAllReviews = () => {
-    fetch('http://localhost:3000/get_reviews', {
+    fetch('https://user-review-server.herokuapp.com/get_reviews', {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
